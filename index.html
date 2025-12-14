@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Ritika ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#ff9a9e,#fad0c4);color:#fff;scroll-behavior:smooth}
+    nav{position:fixed;top:0;width:100%;background:rgba(0,0,0,.4);padding:10px;z-index:100;text-align:center}
+    nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:600}
+    section{min-height:100vh;padding:100px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    h1,h2{font-family:'Great Vibes',cursive}
+    h1{font-size:3.5rem}
+    h2{font-size:3rem;margin-bottom:20px}
+    p{max-width:700px;font-size:1.1rem;line-height:1.8}
+    .btn{margin-top:25px;padding:12px 25px;border:none;border-radius:30px;background:#ff4d6d;color:#fff;font-size:1rem;cursor:pointer}
+
+    /* Cake Styles */
+    #cake{position:relative;margin-top:30px}
+    .plate{width:220px;height:20px;background:#eee;border-radius:50%;margin:auto}
+    .cake-body{width:200px;height:120px;background:#fff3cd;border-radius:10px;margin:-10px auto 0}
+    .icing{width:200px;height:30px;background:#fff;border-radius:10px 10px 20px 20px;position:absolute;top:40px;left:10px}
+    .cherry{width:14px;height:14px;background:#c1121f;border-radius:50%;position:absolute;top:45px}
+    .c1{left:40px}.c2{left:95px}.c3{left:150px}
+    .candle{width:10px;height:35px;background:#ffafcc;margin:auto;position:relative;top:-60px}
+    .flame{width:12px;height:18px;background:orange;border-radius:50% 50% 50% 50%;margin:auto;animation:flicker .2s infinite}
+    @keyframes flicker{0%{opacity:1}50%{opacity:.6}100%{opacity:1}}
+
+    .heart{position:fixed;font-size:20px;animation:float 6s infinite;opacity:.7}
+    @keyframes float{0%{transform:translateY(0)}100%{transform:translateY(-100vh);opacity:0}}
+    .firework{position:fixed;width:6px;height:6px;border-radius:50%;background:#fff;animation:explode 1s ease-out forwards}
+    @keyframes explode{to{transform:translate(var(--x),var(--y)) scale(0);opacity:0}}
+    footer{padding:20px;background:rgba(0,0,0,.4)}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#letter">Letter</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#surprise">Surprise</a>
+  <a href="#forever">Forever</a>
+</nav>
+
+<!-- Background Music -->
+<audio id="music" loop>
+  <!-- Add your Bollywood romantic song file here -->
+  <!-- Example: <source src="song.mp3" type="audio/mpeg"> -->
+</audio>
+
+<section id="home">
+  <h1>Happy Birthday Ritika 🎂❤️</h1>
+  <p style="margin-top:20px;font-size:1.3rem">Meri rasmalai ka birthday hai aaj 💖</p>
+  <p style="margin-top:10px">21 December 2008</p>
+
+  <!-- Cake -->
+  <div id="cake">
+    <div class="plate"></div>
+    <div class="cake-body"></div>
+    <div class="icing"></div>
+    <div class="cherry c1"></div>
+    <div class="cherry c2"></div>
+    <div class="cherry c3"></div>
+
+    <!-- Candles -->
+    <div class="candle" style="left:60px"><div class="flame"></div></div>
+    <div class="candle" style="left:95px"><div class="flame"></div></div>
+    <div class="candle" style="left:130px"><div class="flame"></div></div>
+  </div>
+
+  <p style="margin-top:20px" id="wishText">Make a wish ✨ and blow to turn off the candles 🕯️</p>
+  <button class="btn" onclick="toggleMusic()">Play / Pause Music 🎶</button>
+</section>
+
+<section id="letter">
+  <h2>A Letter From My Heart 💌</h2>
+  <p>
+    Dear Ritika,<br><br>
+    On this special day, I just want you to know how incredibly important you are to me. 
+    You are not just someone I love, you are my comfort, my smile, my peace, and my happiness. 
+    Every time you laugh, my world feels lighter. Every time you’re happy, I feel complete.
+    <br><br>
+    I may not always say the perfect words, but my heart always knows one truth — 
+    I am thankful for you every single day. You make ordinary moments magical just by being you.
+    <br><br>
+    Happy Birthday, my rasmalai ❤️ May your life be as sweet, beautiful, and pure as your heart.
+    <br><br>
+    Forever yours,<br>
+    Jatin 💕
+  </p>
+</section>
+
+<section id="gallery">
+  <h2>Our Memories 📸</h2>
+  <p>
+    This space is waiting for our beautiful moments together.
+    <br><br>
+    (Photos will be added soon 💖)
+  </p>
+</section>
+
+<section id="surprise">
+  <h2>A Special Surprise 🎁</h2>
+  <p>Click the button below 💥</p>
+  <button class="btn" onclick="fireworks();showLove()">Reveal Surprise</button>
+  <h1 id="loveText" style="display:none;margin-top:30px">I Love You ❤️</h1>
+</section>
+
+<section id="forever">
+  <h2>Forever With You ♾️</h2>
+  <p>
+    No matter where life takes us, my heart chooses you — today, tomorrow, always.
+    <br><br>
+    Happy Birthday once again, Ritika ❤️
+  </p>
+</section>
+
+<footer>
+  Made with endless love by Jatin 💖
+</footer>
+
+<script>
+  // Floating hearts
+  setInterval(()=>{
+    const heart=document.createElement('div');
+    heart.className='heart';
+    heart.innerHTML='❤️';
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.bottom='0';
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+  },800);
+
+  // Music
+  const music=document.getElementById('music');
+  function toggleMusic(){music.paused?music.play():music.pause()}
+
+  // Microphone candle blow
+  const flames=document.querySelectorAll('.flame');
+  let blown=false;
+  if(navigator.mediaDevices){
+    navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{
+      const audioCtx=new AudioContext();
+      const mic=audioCtx.createMediaStreamSource(stream);
+      const analyser=audioCtx.createAnalyser();
+      mic.connect(analyser);
+      const data=new Uint8Array(analyser.fftSize);
+      function listen(){
+        analyser.getByteTimeDomainData(data);
+        let volume=0;
+        for(let i=0;i<data.length;i++) volume+=Math.abs(data[i]-128);
+        if(volume>600 && !blown){
+          blown=true;
+          flames.forEach(f=>f.style.display='none');
+          document.getElementById('wishText').innerText='Wish made 🎉';
+          fireworks();
+        }
+        requestAnimationFrame(listen);
+      }
+      listen();
+    }).catch(()=>{});
+  }
+
+  // Fireworks
+  function fireworks(){
+    for(let i=0;i<40;i++){
+      const fw=document.createElement('div');
+      fw.className='firework';
+      fw.style.left='50vw';
+      fw.style.top='50vh';
+      fw.style.setProperty('--x',(Math.random()*400-200)+'px');
+      fw.style.setProperty('--y',(Math.random()*400-200)+'px');
+      document.body.appendChild(fw);
+      setTimeout(()=>fw.remove(),1000);
+    }
+  }
+  function showLove(){document.getElementById('loveText').style.display='block'}
+</script>
+
+</body>
+  </html>
+  
